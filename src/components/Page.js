@@ -1,17 +1,18 @@
 import React from 'react';
-import CircleEl from './elements/CircleElement';
+
 import Header from './pages/Header';
+import Home from './pages/Home';
 import Footer from './pages/Footer';
+import Login from './pages/Login';
 
 export default function Page() {
     return (
-        <>
+        <div>
             <Header />
-            <main style={{ width: '100%', display: 'block', marginBlock: '5% 5%' }}>
-                    <div><CircleEl /></div>
-                    <div><CircleEl /></div>
-            </main>
+                <Login />
+                {/* <Home /> */}
+            
             <Footer />
-        </>
+        </div>
     )
 }
