@@ -1,0 +1,21 @@
+.circle {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background: white;
+    line-height: 0;
+    border: 5px solid black;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.circle .circleText {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+}
