@@ -47,8 +47,8 @@ function LoginForm() {
 
   return (
     <div>
-      <p>Hello {userName}</p>
-      <form className="form">
+      <div className="circle">
+      <form  style={{display: "flex", flexDirection: "column", marginTop: "38%"}} className="form">
         <input
           value={userName}
           name="userName"
@@ -63,13 +63,14 @@ function LoginForm() {
           type="password"
           placeholder="Password"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button type="button" onClick={handleFormSubmit}>Login</button>
       </form>
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
+      </div>
     </div>
   );
 }
