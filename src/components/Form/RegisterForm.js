@@ -42,7 +42,7 @@ function RegisterForm() {
     }
     if (!checkPassword(password)) {
       setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
+        `Choose a more secure password`
       );
       return;
     }
@@ -53,11 +53,11 @@ function RegisterForm() {
     setPassword('');
     setEmail('');
   };
-
+  
   return (
     <div>
-      <p>Welcome {userName}</p>
-      <form className="form">
+      <div className="circle">
+      <form className="form" style={{display: "flex", flexDirection: "column", marginTop: "25%"}}>
         <input
           value={email}
           name="email"
@@ -79,13 +79,14 @@ function RegisterForm() {
           type="password"
           placeholder="Password"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button type="button" onClick={handleFormSubmit}>Register</button>
       </form>
       {errorMessage && (
-        <div>
+        <div style={{display: "flex", justifyContent: "center"}}>
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
+      </div>
     </div>
   );
 }

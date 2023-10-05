@@ -6,6 +6,7 @@
     line-height: 0;
     border: 5px solid black;
     position: relative;
+  
 }
 
 .circle::after {
@@ -15,7 +16,18 @@
 
 .circle .circleText {
     position: absolute;
-    bottom: 50%;
+    bottom: 33%;
     width: 100%;
     text-align: center;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: bolder;
+    font-size: 75px;
+}
+
+.circle:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    background-color: black;
+    border: 5px solid white;
+    cursor: alias;
 }
