@@ -11,7 +11,6 @@ export default function Page() {
             
                 <Login style={{height: "600px"}} />
                 {/* <Home /> */}
-                
             
             <Footer />
         </div>
