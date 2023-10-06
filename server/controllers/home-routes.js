@@ -1,12 +1,10 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
-// Import the custom middleware
+const { Food, Painting } = require('../models');
 const withAuth = require('../utils/auth');
 
-// GET all galleries for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findAll({
+    const dbFoodData = await Food.findAll({
       include: [
         {
           model: Painting,
@@ -15,12 +13,12 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
+    const foods = dbFoodData.map((food) =>
+      food.get({ plain: true })
     );
 
-    res.render('homepage', {
-      galleries,
+    res.send({
+      foods,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -29,11 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET one gallery
-// Use the custom middleware before allowing the user to access the gallery
-router.get('/gallery/:id', withAuth, async (req, res) => {
+router.get('/food/:id', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findByPk(req.params.id, {
+    const dbFoodData = await Food.findByPk(req.params.id, {
       include: [
         {
           model: Painting,
@@ -49,8 +45,8 @@ router.get('/gallery/:id', withAuth, async (req, res) => {
       ],
     });
 
-    const gallery = dbGalleryData.get({ plain: true });
-    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+    const food = dbFoodData.get({ plain: true });
+    res.send({ food, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -59,13 +55,13 @@ router.get('/gallery/:id', withAuth, async (req, res) => {
 
 // GET one painting
 // Use the custom middleware before allowing the user to access the painting
-router.get('/painting/:id', withAuth, async (req, res) => {
+router.get('/painting/:id', async (req, res) => {
   try {
     const dbPaintingData = await Painting.findByPk(req.params.id);
 
     const painting = dbPaintingData.get({ plain: true });
 
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+    res.send({ painting, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

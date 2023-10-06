@@ -31,10 +31,10 @@ Painting.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gallery_id: {
+    food_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'gallery',
+        model: 'food',
         key: 'id',
       },
     },

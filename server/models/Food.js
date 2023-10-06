@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Gallery extends Model {}
+class Food extends Model {}
 
-Gallery.init(
+Food.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,21 +15,29 @@ Gallery.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    starting_date: {
-      type: DataTypes.DATE,
+    calories: {
+      type: DataTypes.FLOAT,
       allowNull: false,
     },
-    ending_date: {
-      type: DataTypes.DATE,
+    fat: {
+      type: DataTypes.FLOAT,
       allowNull: false,
     },
+    carbohydrates: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    protein: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    }
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gallery',
+    modelName: 'food',
   }
 );
 
-module.exports = Gallery;
+module.exports = Food;
