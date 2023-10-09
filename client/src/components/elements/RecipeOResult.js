@@ -1,14 +1,14 @@
 import React from 'react'
+import './RecipeOResult.css'
 
 export const RecipeOResult = ({results}) => {
 	return (
-		<div>
+		<div className='listArrange'>
 			{
 				results.map((result, id) =>{
 					return (
 					<div key={id}>
-						<img src={result.recipe.image}></img>
-						<a href={result.recipe.url}>{result.recipe.label}</a>
+						<a href={result.recipe.url}><img src={result.recipe.image}></img></a>
 					</div>
 					);
 				})
