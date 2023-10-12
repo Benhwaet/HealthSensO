@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import './RecipeForm.css';
+import LogO from '../elements/RecipesO';
 
 export const RecipeForm = ({setResults}) => {
 	const [input, setInput] = useState("");
@@ -19,8 +21,14 @@ export const RecipeForm = ({setResults}) => {
 	}
 
 	return (
-		<div>
-			<input placeholder='Search for Recipe...' value={input} onChange={(e) => handleChange(e.target.value)}></input>
+		<div className='horiz'>
+			<h1>Search<br></br>Recipe</h1>
+			<div className='vert'>
+				<h1>Nutrition</h1>
+				<h1>Recipes</h1>
+				<input className='searchBar' placeholder='Search for Recipe...' value={input} onChange={(e) => handleChange(e.target.value)}></input>
+			</div>
+			<LogO></LogO>
 		</div>
 	);
 };
