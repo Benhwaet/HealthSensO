@@ -43,6 +43,24 @@ function LoginForm() {
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setUserName('');
     setPassword('');
+    
+  if (userName && password) {
+    const response = fetch('/api/users/', {
+      method: 'post',
+      body: JSON.stringify({
+        userName,
+        password
+      }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+    console.log(response);
+
+    // if (response.ok) {
+    //   document.location.replace('/dashboard');
+    // } else {
+    //   alert(response.statusText);
+    // }
+  }
   };
 
   return (
