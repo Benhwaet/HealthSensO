@@ -1,5 +1,5 @@
 import React from 'react'
-import './RecipeOResult.css'
+import './style/RecipeOResult.css'
 
 export const RecipeOResult = ({results}) => {
 	return (

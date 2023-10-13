@@ -65,7 +65,7 @@ function LoginForm() {
 
   return (
     <div>
-      <div className="circle">
+      {/* <div className="circle"> */}
       <form  style={{display: "flex", flexDirection: "column", marginTop: "38%"}} className="form">
         <input
           value={userName}
@@ -89,7 +89,7 @@ function LoginForm() {
         </div>
       )}
       </div>
-    </div>
+    // </div>
   );
 }
 

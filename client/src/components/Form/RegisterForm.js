@@ -56,7 +56,6 @@ function RegisterForm() {
   
   return (
     <div>
-      <div className="circle">
       <form className="form" style={{display: "flex", flexDirection: "column", marginTop: "25%"}}>
         <input
           value={email}
@@ -87,7 +86,6 @@ function RegisterForm() {
         </div>
       )}
       </div>
-    </div>
   );
 }
 

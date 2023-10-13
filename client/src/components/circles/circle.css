@@ -5,14 +5,23 @@
     background: white;
     line-height: 0;
     border: 5px solid black;
-    position: relative;
-  
+    position: relative; 
 }
 
-.circle::after {
+.circle2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: black;
+    line-height: 0;
+    border: 5px solid white;
+    position: relative; 
+}
+
+/* .circle::after {
     display: block;
     padding-bottom: 100%;
-}
+} */
 
 .circle .circleText {
     position: absolute;
@@ -29,5 +38,12 @@
     text-shadow: 1px 1px 1px black;
     background-color: black;
     border: 5px solid white;
-    cursor: alias;
+    cursor: pointer;
+}
+
+.circle2:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    background-color: black;
+    border: 5px solid white;
 }

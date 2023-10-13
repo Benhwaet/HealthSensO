@@ -1,8 +1,8 @@
 import { useState } from "react";
-import {RecipeForm} from "../Form/RecipeForm"
-import {RecipeOResult} from "../elements/RecipeOResult"
-import Header from "./Header.js"
-import Footer from "./Footer.js"
+import {RecipeForm} from "../../Form/RecipeForm"
+import {RecipeOResult} from "./RecipeOResult"
+import Header from "../Header.js"
+import Footer from "../Footer.js"
 
 export default function RecipeOC(){
   const [results, setResults] = useState([]);
