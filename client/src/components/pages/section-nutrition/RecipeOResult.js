@@ -8,7 +8,7 @@ export const RecipeOResult = ({results}) => {
 				results.map((result, id) =>{
 					return (
 					<div key={id}>
-						<a href={result.recipe.url}><img src={result.recipe.image}></img></a>
+						<a href={result.recipe.url}><img src={result.recipe.image} alt="recipe"></img></a>
 					</div>
 					);
 				})

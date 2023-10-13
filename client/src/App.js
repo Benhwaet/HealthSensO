@@ -1,9 +1,9 @@
-import LoginForm from './components/Form/LoginForm';
 import Page from './components/Page';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './components/pages/Login';
-import RegisterForm from './components/Form/RegisterForm';
-import { RecipeForm } from './components/Form/RecipeForm';
+// import LoginForm from './components/Form/LoginForm';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// import Login from './components/pages/Login';
+// import RegisterForm from './components/Form/RegisterForm';
+// import { RecipeForm } from './components/Form/RecipeForm';
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
             <Page/>
         </div>
         
-       <BrowserRouter>
+       {/* <BrowserRouter>
             <div className="App">
                 <Routes>
                     <Route path="/" element={<Login />} />
@@ -21,7 +21,7 @@ function App() {
                     <Route path="/recipe" element={<RecipeForm />} />
                 </Routes>
             </div>
-        </BrowserRouter>
+        </BrowserRouter> */}
         </>
     );
 }

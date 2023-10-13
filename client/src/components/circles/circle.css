@@ -23,10 +23,13 @@
     padding-bottom: 100%;
 } */
 
-.circle .circleText {
+.circleText {
     position: absolute;
     bottom: 33%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: 'Nanum Brush Script', cursive;
     font-weight: bolder;

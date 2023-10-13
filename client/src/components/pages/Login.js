@@ -12,39 +12,44 @@ import "../../index.css"
 export default function Login() {
     const [isActive, setIsActive] = useState(false);
 
-    let regForm = "hidden circleText";
     let regTitle = "visible circleText";
+    let logTitle = "visible circleText";
+    let regForm = "hidden circleText";
+    let logForm = "hidden circleText";
 
     if (isActive === true) {
         regForm = "visible circleText";
         regTitle = "hidden circleText";
+        logForm = "visible circleText";
+        logTitle = "hidden circleText";
+    } else {
+        regForm = "hidden circleText";
+        regTitle = "visible circleText";
+        logForm = "hidden circleText";
+        logTitle = "visible circleText";
     }
-    
+
 
     return (
         <div className="row" style={{ height: "600px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
             <div className="circle">
                 <h2 className={regTitle} onClick={() => setIsActive(false)} isActive={true}>
-                Register
-            </h2>
+                    Register
+                </h2>
             </div>
-            <div className="circle" > 
-                <h2 className={regForm}>
+            <div className={regForm}>
                 <RegisterForm />
-            </h2>
             </div>
 
-            <img className="col-6 col-md-4" src={logo} alt="center page logo" />
+            <img style={{height: '500px', width: '500px'}} src={logo} alt="center page logo" />
 
-            <div className="circle {logTitle}"><h2 className="circleText"
-                onClick={() => setIsActive(false)} isActive={true}>
-                Login
-            </h2>
+            <div className="circle">
+                <h2 className={logTitle} onClick={() => setIsActive(false)} isActive={true}>
+                    Login
+                </h2>
             </div>
-            <div className="circle {logForm} hidden"><h2 className="circleText"
-                isActive={false}>
+            <div className={logForm}>
                 <LoginForm />
-            </h2>
             </div>
         </div>
     )
