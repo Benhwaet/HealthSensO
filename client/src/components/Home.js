@@ -8,7 +8,8 @@ import LogO from './circles/LogO';
 
 function Home({currentPage, handlePageChange}) {
     return (
-        <div className="row" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", 
+        <div className="row" style={{ display: "flex", flexDirection: "row", 
+        justifyContent: "space-evenly", alignContent: "center",  
         textAlign: "center", marginTop: "200px", marginBottom: "200px" }}>
             <NutritionO 
             href="#nutrition"

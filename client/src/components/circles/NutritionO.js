@@ -5,7 +5,7 @@ import './circle.css';
 export default function NutritionO() {
     return (
       <div className="circle">
-        <div className="circleText">Nutrition</div>
+        <div className="circleText2">Nutrition</div>
       </div>
     );
   }

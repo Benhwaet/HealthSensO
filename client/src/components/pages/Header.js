@@ -13,7 +13,7 @@ export default function Header() {
                         <a className="logoutText" href="Login">Log Out</a>
                         </Col>
                     <Col style={{display: "flex", justifyContent: "center", alignItems: "center", position: "relative"}}>
-                    <img src={logo} alt="logo" style={{height: "100px", margin: "10px"}}/>
+                    <img src={logo} alt="logo" style={{height: "125px"}}/>
                     <AvatarImg/>
                     </Col>
                     <Col className="help">

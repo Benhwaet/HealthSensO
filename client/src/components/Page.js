@@ -10,7 +10,7 @@ import Footer from './pages/Footer';
 
 
 export default function Page() {
-    const [currentPage, setCurrentPage] = useState("Home");
+    const [currentPage, setCurrentPage] = useState("Login");
     
     const renderPage = () => {
         if (currentPage === "Login") {
