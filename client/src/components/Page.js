@@ -6,10 +6,11 @@ import Nutrition from './pages/Nutrition';
 import RecipeOC from './pages/section-nutrition/RecipeOC';
 // import Log from './pages/Log';
 import Footer from './pages/Footer';
+import ServingCounter from './pages/section-nutrition/ServingCounter';
 
 
 export default function Page() {
-    const [currentPage, setCurrentPage] = useState("Recipes");
+    const [currentPage, setCurrentPage] = useState('ServingCounter');
     
     const renderPage = () => {
         if (currentPage === "Login") {
@@ -23,6 +24,9 @@ export default function Page() {
         }
         if (currentPage === "Recipes") {
             return <RecipeOC/>;
+        }
+        if (currentPage === "ServingCounter") {
+            return <ServingCounter/>;
         }
         // if (currentPage === "Log") {
         //     return <Log/>;

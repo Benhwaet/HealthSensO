@@ -15,7 +15,8 @@ export default function Login() {
 
     return (
         <>
-        <div className="row" style={{ height: "600px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
+        <header style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', bottom: '150px'}}></header>
+        <div className="row" style={{position: 'relative', bottom: '130px', height: "400px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
             <div className="circle" onClick={() => setElementVisible(!elementVisible)}>
                 <h2 className="circleText" >
                     Register
