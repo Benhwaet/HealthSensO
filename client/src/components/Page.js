@@ -3,14 +3,13 @@ import Header from './pages/Header';
 import Login from './pages/Login';
 import Home from './Home';
 import Nutrition from './pages/Nutrition';
-// import Recipes from './pages/Recipes';
-// import Sleep from './pages/Sleep';
+import RecipeOC from './pages/section-nutrition/RecipeOC';
 // import Log from './pages/Log';
 import Footer from './pages/Footer';
 
 
 export default function Page() {
-    const [currentPage, setCurrentPage] = useState("Login");
+    const [currentPage, setCurrentPage] = useState("Recipes");
     
     const renderPage = () => {
         if (currentPage === "Login") {
@@ -22,12 +21,9 @@ export default function Page() {
         if (currentPage === "Nutrition") {
             return <Nutrition/>;
         }
-        // if (currentPage === "Recipes") {
-        //     return <Recipes/>;
-        // }
-        // if (currentPage === "Sleep") {
-        //     return <Sleep/>;
-        // }
+        if (currentPage === "Recipes") {
+            return <RecipeOC/>;
+        }
         // if (currentPage === "Log") {
         //     return <Log/>;
         // }
