@@ -1,69 +1,81 @@
-.servContainer {
-    position:sticky;
-    margin-right: 10%;
-}
-
-.servings {
-
-	border-radius: 0.5em;
-    position: absolute;
-}
-
-button {
-    border: 1px solid black;
-    background-color: white;
-    color: black;
-    font-size: 1.5em;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.serving-amount {
+.servingSection {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.rowSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+
+}
+
+.colContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+}
+
+.servings {
+    border-radius: 0.5em;
     position: relative;
 }
 
-.veg {
-    position: relative;
-    right: 49%;
-    top: 25%;
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.serving-amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+   font-family: 'Nanum Brush Script', cursive;
+   font-weight: bolder;
+   font-size: 20px;
 }
 
-.fruit {
-    position: relative;
-    right: 47%;
-    bottom: 10%;
+
+.progress-bar-vertical {
+    width: 80px;
+    min-height: 428px;
+    display: flex;
+    align-items: flex-end;
+    float: left;
 }
 
-.grain {
-    position: relative;
-    left: 70%;
-    bottom: 23%;
+.progress-bar-vertical .progress-bar {
+    width: 100%;
+    height: 100px;
+    -webkit-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
 }
 
-.meat {
-    position: relative;
-    left: 70%;
-    bottom: 17%;
+
+.waterServing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+
 }
 
-.sweet {
+.glass {
     position: relative;
-    right: 50%;
-    bottom: 3%;
-}
-
-.fat {
-    position: relative;
-    bottom: 9%;
-    left: 10%;
-}
-
-.dairy {
-    position: relative;
-    bottom: 26%;
-    left: 60%;
+    height: 450px;
+    width: 250px;
+    border-radius: 0%;
+    z-index: -1;
 }

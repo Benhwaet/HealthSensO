@@ -1,35 +1,46 @@
 import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import serving from '../../../images/servings0.png';
 import kcal from '../../../images/Kcal.png';
 import './ServingCounter.css'
-import WaterChart from "../../circles/waterchart";
+import water from "../../../images/Water.png";
+import { Link } from "@mui/material";
 
 export default function ServingCounter() {
     return (
-    <div>
-        <Container>
-            <Row>
-                <Col className="servContainer"> 
-                <img className="servings" style={{ height: '400px', width: '400px' }} 
-                src={serving} alt="center page logo" />
-                <button className="serving-amount veg">v: 6</button>
-                <button className="serving-amount fruit">f: 4</button>
-                <button className="serving-amount grain">g: 5</button>
-                <button className="serving-amount meat">m: 3</button>
-                <button className="serving-amount sweet">s: 0</button>
-                <button className="serving-amount fat">f: .25</button>
-                <button className="serving-amount dairy">d: 2</button>
-                </Col>
-                <Col>
-                <img style={{ height: '400px', width: '400px' }} 
-                src={kcal} alt="center page logo" />
-                 </Col>
-                <Col> 
-                <WaterChart />
-                </Col>
-            </Row>
-        </Container>
-    </div>
+        <div>
+            <div className="servingPage">
+                <Row className="rowSection">
+                    <div className="column">
+                        <img className="food group servings" style={{ height: '450px', width: '450px' }}
+                            src={serving} alt="servings on plate" />
+                        <div className="buttonGroup">
+                <button className="serving-amount veg">veggie: 6</button>
+                <button className="serving-amount fruit">fruit: 4</button>
+                <button className="serving-amount grain">grain: 5</button>
+                <button className="serving-amount meat">meat: 3</button>
+                <button className="serving-amount dairy">dairy: 2</button>
+                <button className="serving-amount fat">fat: 0.25</button>
+                <button className="serving-amount sweet">sweet: 0</button>
+                </div>
+                    </div>
+                    <div className="column kcalBtn">
+                    <Link>
+                        <img style={{ height: '450px', width: '450px' }}
+                            src={kcal} alt="center page logo" />
+                    </Link>
+                    </div>
+                    
+                    <div className="column waterServing">
+                        <div class="progress progress-bar-vertical">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" 
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                        <img className="glass" src={water} alt="water glass" />
+                    </div>
+                </Row>
+            </div>
+        </div>
     )
 }

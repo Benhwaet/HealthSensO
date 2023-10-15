@@ -1,5 +1,5 @@
 import { useState } from "react";
-import RegisterForm from "../Form/RegisterForm";
+import RegisterForm from "../forms/RegisterForm";
 //import LoginForm from "../Form/LoginForm";
 import logo from "../../images/O.png";
 import "../circles/circle.css";

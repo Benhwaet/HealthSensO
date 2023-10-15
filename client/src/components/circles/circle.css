@@ -18,10 +18,10 @@
     position: relative; 
 }
 
-/* .circle::after {
+.circle::after {
     display: block;
     padding-bottom: 100%;
-} */
+}
 
 .circleText {
     position: absolute;

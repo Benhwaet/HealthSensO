@@ -1,0 +1,56 @@
+/* HEADER */
+.top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 125px;
+    height: 125px;
+    z-index: 1;
+}
+
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    position: relative;
+    right: 82px;
+    width: 100px;
+}
+
+.logoutText{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 40px;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.helpText{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 40px;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.logoutText:active,
+.helpText:active {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    background-color: black;
+    border: 5px solid white;
+    cursor: pointer;
+}
+
+.logoutText:hover,
+.helpText:hover {
+    color: red;
+    cursor: pointer;
+}
