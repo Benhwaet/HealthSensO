@@ -3,10 +3,11 @@ import Header from './pages/Header';
 import Login from './pages/Login';
 import Home from './Home';
 import Nutrition from './pages/Nutrition';
+import ServingCounter from './pages/section-nutrition/ServingCounter';
 import RecipeOC from './pages/section-nutrition/RecipeOC';
 // import Log from './pages/Log';
 import Footer from './pages/Footer';
-import ServingCounter from './pages/section-nutrition/ServingCounter';
+
 
 
 export default function Page() {

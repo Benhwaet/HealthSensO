@@ -1,27 +1,28 @@
 import Page from './components/Page';
-// import LoginForm from './components/Form/LoginForm';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Login from './components/pages/Login';
-// import RegisterForm from './components/Form/RegisterForm';
-// import { RecipeForm } from './components/Form/RecipeForm';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/pages/Login';
+import RegisterForm from './components/forms/RegisterForm';
+import LoginForm from './components/forms/LoginForm';
+import Home from './components/pages/Home';
+import ServingCounter from './components/pages/section-nutrition/ServingCounter';
+import RecipeOC from './components/pages/section-nutrition/RecipeOC';
 
 function App() {
-    return (
-        <>
-        <div>
-            <Page/>
-        </div>
-        
-       {/* <BrowserRouter>
-            <div className="App">
-                <Routes>
-                    <Route path="/" element={<Login />} />
-                    <Route path="/register" element={<RegisterForm />} />
-                    <Route path="/login" element={<LoginForm />} />
-                    <Route path="/recipe" element={<RecipeForm />} />
-                </Routes>
+return (
+    <>
+        <BrowserRouter>
+            <div>
+                <Page />
             </div>
-        </BrowserRouter> */}
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/register" element={<RegisterForm />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/servingcounter" element={<ServingCounter />} />
+                <Route path="/recipes" element={<RecipeOC />} /> 
+            </Routes>
+    </BrowserRouter >
         </>
     );
 }

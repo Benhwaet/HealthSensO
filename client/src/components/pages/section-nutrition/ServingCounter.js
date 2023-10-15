@@ -1,11 +1,10 @@
 import React from "react";
 import { Row } from 'react-bootstrap';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import serving from '../../../images/servings0.png';
 import kcal from '../../../images/Kcal.png';
 import './ServingCounter.css'
 import water from "../../../images/Water.png";
+import { Link } from "@mui/material";
 
 export default function ServingCounter() {
     return (
@@ -26,9 +25,12 @@ export default function ServingCounter() {
                 </div>
                     </div>
                     <div className="column kcalBtn">
+                    <Link>
                         <img style={{ height: '450px', width: '450px' }}
                             src={kcal} alt="center page logo" />
+                    </Link>
                     </div>
+                    
                     <div className="column waterServing">
                         <div class="progress progress-bar-vertical">
                             <div class="progress-bar progress-bar-striped active" role="progressbar" 
