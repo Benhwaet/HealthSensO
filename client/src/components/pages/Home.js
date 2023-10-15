@@ -1,5 +1,5 @@
 import React from "react";
-import "./circles/circle.css";
+import "../CircleLinks/circle.css";
 import NutritionO from '../CircleLinks/NutritionO';
 import RecipesO from '../CircleLinks/RecipesO';
 import LogO from '../CircleLinks/LogO';

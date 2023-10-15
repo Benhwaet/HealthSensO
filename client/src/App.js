@@ -4,7 +4,7 @@ import Login from './components/pages/Login/Login';
 import RegisterForm from './components/forms/RegisterForm';
 import LoginForm from './components/forms/LoginForm';
 import Home from './components/pages/Home';
-import ServingCounter from './components/pages/Nutrition/ServingCounter';
+import ServingCounter from './components/Counters/ServingCounter';
 import RecipeOC from './components/pages/Recipes/RecipeOC';
 
 function App() {

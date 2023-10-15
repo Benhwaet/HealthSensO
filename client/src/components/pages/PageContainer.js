@@ -1,14 +1,14 @@
 // Might not be necessary if using React-Router-Dom
 
 import React, {useState} from 'react';
-import Header from './pages/Header/Header';
-import Login from './pages/Login/Login';
+import Header from '../Header/Header';
+import Login from '../pages/Login/Login';
 import Home from './Home';
-import Nutrition from './pages/Nutrition/Nutrition';
-import ServingCounter from './pages/Nutrition/ServingCounter';
-import RecipeOC from './pages/Recipes/RecipeOC';
-// import Log from './pages/Logbook/Log';
-import Footer from './pages/Footer/Footer';
+import Nutrition from './Nutrition/Nutrition';
+import ServingCounter from './Nutrition/Nutrition';
+import RecipeOC from './Recipes/RecipeOC';
+// import Log from './Logbook/Logbook';
+import Footer from '../Footer/Footer';
 
 
 export default function Page() {
