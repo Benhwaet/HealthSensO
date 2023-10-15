@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import './form.css';
 
+import { checkPassword, validateEmail } from '../../utils/helpers';
+
 function LoginForm() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
-  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -16,51 +18,52 @@ function LoginForm() {
     const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, username, and password
-  if (inputType === 'userName') {
-      setUserName(inputValue);
+    if (inputType === 'email') {
+      setEmail(inputValue);
     } else {
       setPassword(inputValue);
     }
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!userName) {
-        setErrorMessage('Username is invalid');
-        return;
-    // We want to exit out of this code block if something is wrong so that the user can correct it
+    if (email && password) {
+      const response = await fetch('/api/users/login', {
+        method: 'post',
+        body: JSON.stringify({
+          email,
+          password
+        }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+      console.log(response);
+  
+      if (response.ok) {
+        document.location.replace('/');
+      } else {
+        alert('Failed to log in');
+      }
     }
 
-    if (!password) {
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    if (!validateEmail(email) || !password) {
+      setErrorMessage('Email or password is invalid');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    }
+
+    if (!checkPassword(password) || !password) {
       setErrorMessage('Password is invalid');
       return;
     }
-    alert(`Hello ${userName}`);
+    alert(`Hello ${email}`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
+    setEmail('');
     setPassword('');
-    
-  if (userName && password) {
-    const response = fetch('/api/users/', {
-      method: 'post',
-      body: JSON.stringify({
-        userName,
-        password
-      }),
-      headers: { 'Content-Type': 'application/json' }
-    });
-    console.log(response);
-
-    // if (response.ok) {
-    //   document.location.replace('/dashboard');
-    // } else {
-    //   alert(response.statusText);
-    // }
-  }
   };
 
   return (
@@ -68,11 +71,11 @@ function LoginForm() {
       <div className="circle">
       <form  style={{display: "flex", flexDirection: "column", marginTop: "38%"}} className="form">
         <input
-          value={userName}
-          name="userName"
+          value={email}
+          name="email"
           onChange={handleInputChange}
           type="text"
-          placeholder="username"
+          placeholder="email"
         />
         <input
           value={password}

@@ -9,7 +9,7 @@ function RegisterForm() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -22,31 +22,39 @@ function RegisterForm() {
     // Based on the input type, we set the state of either email, username, and password
     if (inputType === 'email') {
       setEmail(inputValue);
-    } else if (inputType === 'userName') {
+    } else if (inputType === 'username') {
       setUserName(inputValue);
     } else {
       setPassword(inputValue);
     }
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
+    if (username && email && password) {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ username, email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      console.log(response);
+    }
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
+    if (!validateEmail(email) || !username) {
       setErrorMessage('Email or username is invalid');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
       // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
     }
-    if (!checkPassword(password)) {
+    if (!checkPassword(password) || !password) {
       setErrorMessage(
         `Choose a more secure password`
       );
       return;
     }
-    alert(`Hello ${userName}`);
+    alert(`Hello ${username}`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setUserName('');
@@ -66,8 +74,8 @@ function RegisterForm() {
           placeholder="email"
         />
         <input
-          value={userName}
-          name="userName"
+          value={username}
+          name="username"
           onChange={handleInputChange}
           type="text"
           placeholder="username"
