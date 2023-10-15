@@ -1,12 +1,31 @@
-.servContainer {
-    position:sticky;
-    margin-right: 10%;
+
+
+.servingSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+
+}
+
+.colContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 450px;
 }
 
 .servings {
-
 	border-radius: 0.5em;
-    position: absolute;
 }
 
 button {

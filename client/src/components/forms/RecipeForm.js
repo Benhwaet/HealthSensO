@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './RecipeForm.css';
-import LogO from '../circleEl/RecipesO';
+import LogO from '../circles/RecipesO';
 
 export const RecipeForm = ({setResults}) => {
 	const [input, setInput] = useState("");

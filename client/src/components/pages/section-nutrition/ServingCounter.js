@@ -3,16 +3,17 @@ import { Container, Row, Col } from 'react-bootstrap';
 import serving from '../../../images/servings0.png';
 import kcal from '../../../images/Kcal.png';
 import './ServingCounter.css'
-import WaterChart from "../../circles/waterchart";
+import water from "../../../images/Water.png";
 
 export default function ServingCounter() {
     return (
     <div>
-        <Container>
-            <Row>
-                <Col className="servContainer"> 
-                <img className="servings" style={{ height: '400px', width: '400px' }} 
-                src={serving} alt="center page logo" />
+        <div className="servingPage">
+            <Row className="rowSection">
+                <div className="column"> 
+                <img className="food group servings" style={{ height: '450px', width: '450px' }} 
+                src={serving} alt="servings on plate" />
+                {/* <span>
                 <button className="serving-amount veg">v: 6</button>
                 <button className="serving-amount fruit">f: 4</button>
                 <button className="serving-amount grain">g: 5</button>
@@ -20,16 +21,18 @@ export default function ServingCounter() {
                 <button className="serving-amount sweet">s: 0</button>
                 <button className="serving-amount fat">f: .25</button>
                 <button className="serving-amount dairy">d: 2</button>
-                </Col>
-                <Col>
-                <img style={{ height: '400px', width: '400px' }} 
+                </span> */}
+                </div>
+                <div className="column kcalBtn">
+                <img style={{ height: '450px', width: '450px' }} 
                 src={kcal} alt="center page logo" />
-                 </Col>
-                <Col> 
-                <WaterChart />
-                </Col>
+                 </div>
+                <div className="column waterGlass"> 
+                <img style={{ height: '450px', width: '450px' }} 
+                src={water} alt="water glass" />
+                </div>
             </Row>
-        </Container>
+        </div>
     </div>
     )
 }
