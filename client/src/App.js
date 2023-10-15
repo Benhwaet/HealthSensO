@@ -1,11 +1,11 @@
 import Page from './components/Page';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './components/pages/Login';
+import Login from './components/pages/Login/Login';
 import RegisterForm from './components/forms/RegisterForm';
 import LoginForm from './components/forms/LoginForm';
 import Home from './components/pages/Home';
-import ServingCounter from './components/pages/section-nutrition/ServingCounter';
-import RecipeOC from './components/pages/section-nutrition/RecipeOC';
+import ServingCounter from './components/pages/Nutrition/ServingCounter';
+import RecipeOC from './components/pages/Recipes/RecipeOC';
 
 function App() {
 return (
