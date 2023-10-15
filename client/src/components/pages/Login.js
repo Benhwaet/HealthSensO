@@ -1,8 +1,8 @@
 import React from "react";
-import RegisterForm from "../Form/RegisterForm";
-import LoginForm from "../Form/LoginForm";
+import RegisterForm from "../forms/RegisterForm";
+import LoginForm from "../forms/LoginForm";
 import logo from "../../images/O.png";
-import "../elements/circle.css";
+import "../circleEl//circle.css";
 import { useNavigate } from "react-router-dom";
 
 // export default function Login() {

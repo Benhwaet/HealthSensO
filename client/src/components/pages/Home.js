@@ -1,10 +1,10 @@
 import React from "react";
-import "../elements/circle.css";
-import NutritionO from '../elements/NutritionO';
-import RecipesO from '../elements/RecipesO';
-import SleepO from '../elements/SleepO';
-import LogO from '../elements/LogO';
-import AvatarImg from "../elements/Avatar";
+import "../circleEl//circle.css";
+import NutritionO from '../circleEl//NutritionO';
+import RecipesO from '../circleEl//RecipesO';
+import SleepO from '../circleEl//SleepO';
+import LogO from '../circleEl//LogO';
+import AvatarImg from "../circleEl//Avatar";
 
 
 export default function Home() {
