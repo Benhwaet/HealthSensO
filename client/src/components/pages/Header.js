@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import AvatarImg from '../elements/Avatar';
+import AvatarImg from '../circleEl/Avatar';
 const logo = require('../../images/Owhite.png');
 
 export default function Header() {
