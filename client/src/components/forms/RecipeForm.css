@@ -22,7 +22,8 @@
 .searchBar{
 	border-radius: 1%;
 	width: 30vw;
-	height: 2vh;
+	height: 4vh;
 	font-family: 'Nanum Brush Script', cursive;
     font-weight: bolder;
+	font-size: 20px;
 }

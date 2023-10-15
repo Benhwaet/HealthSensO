@@ -1,5 +1,5 @@
 import React from 'react'
-import './style/RecipeOResult.css'
+import './RecipeOResult.css'
 
 export const RecipeOResult = ({results}) => {
 	return (
@@ -8,7 +8,8 @@ export const RecipeOResult = ({results}) => {
 				results.map((result, id) =>{
 					return (
 					<div key={id}>
-						<a href={result.recipe.url}><img src={result.recipe.image}></img></a>
+			{/* We can use ```target="_blank" rel="noopener"``` in the anchor to open in new tab */}
+						<a href={result.recipe.url}><img src={result.recipe.image} alt="recipe"></img></a>
 					</div>
 					);
 				})

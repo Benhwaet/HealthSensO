@@ -23,16 +23,32 @@
     padding-bottom: 100%;
 } */
 
-.circle .circleText {
+.circleText {
     position: absolute;
     bottom: 33%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: 'Nanum Brush Script', cursive;
     font-weight: bolder;
     font-size: 75px;
 }
 
+.circleText2 {
+    position: absolute;
+    bottom: 33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: bolder;
+    font-size: 75px;
+    margin-bottom: 15%;
+}
 .circle:hover {
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px black;
@@ -47,3 +63,7 @@
     background-color: black;
     border: 5px solid white;
 }
+
+/* .donut-chart {
+
+} */

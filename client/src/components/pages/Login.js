@@ -1,6 +1,6 @@
 import { useState } from "react";
 import RegisterForm from "../Form/RegisterForm";
-import LoginForm from "../Form/LoginForm";
+//import LoginForm from "../Form/LoginForm";
 import logo from "../../images/O.png";
 import "../circles/circle.css";
 import "../../index.css"
@@ -10,43 +10,37 @@ import "../../index.css"
 
 
 export default function Login() {
-    const [isActive, setIsActive] = useState(false);
+    const [elementVisible, setElementVisible] = useState(false);
 
-    let regForm = "hidden circleText";
-    let regTitle = "visible circleText";
-
-    if (isActive === true) {
-        regForm = "visible circleText";
-        regTitle = "hidden circleText";
-    }
-    
 
     return (
-        <div className="row" style={{ height: "600px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
-            <div className="circle">
-                <h2 className={regTitle} onClick={() => setIsActive(false)} isActive={true}>
-                Register
-            </h2>
-            </div>
-            <div className="circle" > 
-                <h2 className={regForm}>
-                <RegisterForm />
-            </h2>
+        <>
+        <header style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', bottom: '150px'}}></header>
+        <div className="row" style={{position: 'relative', bottom: '130px', height: "400px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
+            <div className="circle" onClick={() => setElementVisible(!elementVisible)}>
+                <h2 className="circleText" >
+                    Register
+                </h2>
+                {elementVisible ? (
+                    <div className="circleText">
+                        <RegisterForm />
+                    </div>) : null}
             </div>
 
-            <img className="col-6 col-md-4" src={logo} alt="center page logo" />
 
-            <div className="circle {logTitle}"><h2 className="circleText"
-                onClick={() => setIsActive(false)} isActive={true}>
-                Login
-            </h2>
+            <img style={{ height: '500px', width: '500px' }} src={logo} alt="center page logo" />
+
+    
+                <div className="circle">
+                    <h2 className="circleText" onClick={() => setElementVisible(!elementVisible)}>
+                        Login
+                    </h2>
+                    {/* <div className="circleText">
+                        <LoginForm />
+                    </div> */}
+                </div>
             </div>
-            <div className="circle {logForm} hidden"><h2 className="circleText"
-                isActive={false}>
-                <LoginForm />
-            </h2>
-            </div>
-        </div>
+            </>
     )
 }
 
@@ -57,7 +51,7 @@ export default function Login() {
 //   const registerClick = () => navigate("/register");
 
 //     return (
-//         <div className="row" style={{height: "600px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px"}}>
+//<div className="row" style={{height: "600px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px"}}>
 //             <div style = {{
 //                 width: "300px",
 //                 height: "300px"
