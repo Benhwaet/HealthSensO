@@ -1,5 +1,4 @@
 import React from "react";
-import RegisterForm from "../../Forms/RegisterForm";
 import LoginForm from "../../Forms/LoginForm";
 import logo from "./O.png";
 import "./circle.css";
@@ -7,9 +6,9 @@ import "./login.css"
 import { useNavigate } from "react-router-dom";
 
 
-export default function Login() {
+export default function UserLogin() {
     const navigate = useNavigate();
-    const loginClick = () => navigate("/login");
+    const loginClick = () => navigate("/home");
     const registerClick = () => navigate("/register");
 
     return (
@@ -24,7 +23,7 @@ export default function Login() {
                 <img style={{ height: '500px', width: '500px' }} src={logo} alt="center page logo" />
                 <div className="circle" onClick={loginClick}>
                     <h2 className="circleText">
-                        Login
+                        <LoginForm/>
                     </h2>
                 </div>
 

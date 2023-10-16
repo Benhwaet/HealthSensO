@@ -28,7 +28,8 @@ export const RecipeForm = ({setResults}) => {
 				<h1>Recipes</h1>
 				<input className='searchBar' placeholder='Search for Recipe...' value={input} onChange={(e) => handleChange(e.target.value)}></input>
 			</div>
-			<LogO/>
+			<LogO 
+            href="/log"/>
 		</div>
 	);
 };
