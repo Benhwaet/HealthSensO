@@ -33,11 +33,11 @@ header {
 .logoutText{
     color: white;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
     font-size: 40px;
     margin-top: 40px;
     font-family: 'Nanum Brush Script', cursive;
+    line-height: 1;
 }
 
 .helpText{

@@ -7,8 +7,8 @@ export default function ServingCounter() {
 
     let [count, setCount] = useState(0);
 
-    const handleClick = (event) => {
-        this.event = setCount((count + 1));
+    const handleClick = () => {
+    setCount((count + 1));
     }
 
     return (

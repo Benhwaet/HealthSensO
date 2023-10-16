@@ -7,7 +7,7 @@ import WaterTracker from '../../Counters/WaterTracker';
 export default function Nutrition() {
     return (
         <div>
-            <Row>
+
             <div>
             <ServingCounter />
             </div>
@@ -17,7 +17,7 @@ export default function Nutrition() {
             <div>
             <WaterTracker/>
             </div>
-            </Row>
+
         </div>
     )
 }

@@ -6,6 +6,8 @@
     line-height: 0;
     border: 5px solid black;
     position: relative; 
+    display: flex;
+    align-content: center;
 }
 
 .circle2 {
@@ -31,6 +33,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 20%;
     font-family: 'Nanum Brush Script', cursive;
     font-weight: bolder;
     font-size: 75px;
