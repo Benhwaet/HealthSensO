@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './circle.css';
-import { Link } from '@mui/material';
 
 export default function LogO() {
     return (
       <>
       <Link to ="/log">
       <div className="circle">
-        <div className="circleText2">Log</div>
+        <div className="circleText">Log</div>
       </div>
       </Link>
       </>

@@ -1,4 +1,14 @@
-/* HEADER */
+header {
+    background-color: black; 
+    height: '150px'; 
+    width: '100%';
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 .top-logo {
     display: flex;
     justify-content: center;

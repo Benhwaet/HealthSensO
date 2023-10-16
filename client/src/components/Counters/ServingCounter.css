@@ -1,3 +1,7 @@
+.servingPage {
+    margin: 20px;
+}
+
 .servingSection {
     display: flex;
     flex-direction: row;
@@ -11,7 +15,6 @@
     justify-content: space-evenly;
     align-items: center;
     height: 70vh;
-
 }
 
 .colContainer {
@@ -29,7 +32,7 @@
 .buttonGroup {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .serving-amount {
     display: flex;

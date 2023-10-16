@@ -1,8 +1,5 @@
 import React from "react";
-import RegisterForm from "../../Forms/RegisterForm";
-import LoginForm from "../../Forms/LoginForm";
 import logo from "./O.png";
-import "./circle.css";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +24,7 @@ export default function Login() {
                         Login
                     </h2>
                 </div>
-
+                <footer style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', top: '50px' }}></footer>
             </div>
         </>
     )

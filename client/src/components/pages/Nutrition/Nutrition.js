@@ -1,14 +1,23 @@
 import React from 'react';
-import Nutrient from './NutrientOC';
+import { Row } from 'react-bootstrap';
+import NutrientOC from './NutrientOC';
 import ServingCounter from '../../Counters/ServingCounter';
-import Water from '../../Counters/WaterTracker';
+import WaterTracker from '../../Counters/WaterTracker';
 
 export default function Nutrition() {
     return (
         <div>
+            <Row>
+            <div>
             <ServingCounter />
-            <Nutrient />
-            <Water/>
+            </div>
+            <div>
+            <NutrientOC />
+            </div>
+            <div>
+            <WaterTracker/>
+            </div>
+            </Row>
         </div>
     )
 }

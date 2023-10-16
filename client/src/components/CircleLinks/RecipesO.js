@@ -1,12 +1,12 @@
 import React from 'react';
-import './circle.css';
 import { Link } from 'react-router-dom';
+import './circle.css';
 
 export default function RecipesO(){
     return (
       <Link to ="/recipes">
       <div className="circle">
-        <div className="circleText2">Recipes</div>
+        <div className="circleText">Recipes</div>
       </div>
       </Link>
     );

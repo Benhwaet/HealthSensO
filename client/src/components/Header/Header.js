@@ -8,7 +8,7 @@ const logo = require('./images/Owhite2.png');
 
 export default function Header() {
     return (
-        <header style={{ backgroundColor: 'black', height: '150px', width: '100%'}}>
+        <header style={{ }}>
             <Container>
                 <Row>
                     <Col className="logout">

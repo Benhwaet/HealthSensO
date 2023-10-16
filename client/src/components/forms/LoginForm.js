@@ -84,6 +84,7 @@ function LoginForm() {
           placeholder="Password"
         />
         <button type="button" onClick={handleFormSubmit}>Login</button>
+        {/* also send to path="/home" if valid*/}
       </form>
       {errorMessage && (
         <div>
