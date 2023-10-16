@@ -1,7 +1,6 @@
 //From 20-React/01-Activities/16-Stu_React-Forms/Solved/src/components/Form/Form.js
 import React, { useState } from 'react';
 import './form.css';
-
 import { checkPassword, validateEmail } from '../../utils/helpers';
 
 function LoginForm() {
@@ -38,10 +37,9 @@ function LoginForm() {
         }),
         headers: { 'Content-Type': 'application/json' }
       });
-      console.log(response);
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/home');
       } else {
         alert('Failed to log in');
       }
@@ -58,8 +56,7 @@ function LoginForm() {
     if (!checkPassword(password) || !password) {
       setErrorMessage('Password is invalid');
       return;
-    }
-    alert(`Hello ${email}`);
+    };
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setEmail('');
