@@ -1,16 +1,14 @@
 import React from 'react';
-import RecipeOC from '../Recipes/RecipeOC';
-import RecipeBook from '../Recipes/RecipeBook';
-import CalCalculator from '../Nutrition/CalCalculator';
-import ServingCounter from '../Nutrition/ServingCounter';
+import Nutrient from './NutrientOC';
+import ServingCounter from '../../Counters/ServingCounter';
+import Water from '../../Counters/WaterTracker';
 
 export default function Nutrition() {
     return (
         <div>
-            <RecipeOC />
-            <RecipeBook />
-            <CalCalculator />
             <ServingCounter />
+            <Nutrient />
+            <Water/>
         </div>
     )
 }

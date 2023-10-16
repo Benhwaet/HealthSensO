@@ -1,0 +1,22 @@
+.nutrO{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-color: black;
+	border-style: solid;
+	height: 100vh;
+	width: 40vh;
+	margin-left: 40vw;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	font-size: 150%;
+}
+
+.resO{
+	border-style: solid;
+	border-top: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

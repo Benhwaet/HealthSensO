@@ -1,8 +1,8 @@
-import Page from './components/Page';
+import Page from './components/pages/PageContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
-import RegisterForm from './components/forms/RegisterForm';
-import LoginForm from './components/forms/LoginForm';
+import RegisterForm from './components/Forms/RegisterForm';
+import LoginForm from './components/Forms/LoginForm';
 import Home from './components/pages/Home';
 import ServingCounter from './components/Counters/ServingCounter';
 import RecipeOC from './components/pages/Recipes/RecipeOC';

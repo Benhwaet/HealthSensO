@@ -24,13 +24,7 @@ export default function ServingCounter() {
                 <button className="serving-amount sweet">sweet: 0</button>
                 </div>
                     </div>
-                    <div className="column kcalBtn">
-                    <Link>
-                        <img style={{ height: '450px', width: '450px' }}
-                            src={kcal} alt="center page logo" />
-                    </Link>
-                    </div>
-                    
+
                  
                 </Row>
             </div>

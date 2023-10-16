@@ -1,6 +1,6 @@
 import { useState } from "react";
-import {NutrientForm} from "../Form/NutrientForm.js"
-import {NutrientOResult} from "../elements/NutrientOResult.js"
+import {NutrientForm} from "./NutrientForm.js"
+import {NutrientOResult} from "./NutrientOResult.js"
 // import Header from "./Header.js"
 // import Footer from "./Footer.js"
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
-import avatar from '../../images/avatar.png';
+import avatar from '../images/avatar.png';
 import './header.css';
-const logo = require('../../images/Owhite2.png');
+const logo = require('../images/Owhite2.png');
 
 export default function Header() {
     return (

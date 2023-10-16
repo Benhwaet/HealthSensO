@@ -1,9 +1,9 @@
 import { useState } from "react";
-import RegisterForm from "../../forms/RegisterForm";
+import RegisterForm from "../../Forms/RegisterForm";
 //import LoginForm from "../Form/LoginForm";
 import logo from "../../images/O.png";
 import "./circle.css";
-import "../../../index.css"
+import "./login.css"
 
 //import { useNavigate } from "react-router-dom";
 

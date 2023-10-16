@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {RecipeForm} from "../../forms/RecipeForm"
+import {RecipeForm} from "./RecipeForm"
 import {RecipeOResult} from "./RecipeOResult"
 // import Header from "../Header.js"
 // import Footer from "../Footer.js"

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import "./RecipeForm.css"
+import "../Recipes/RecipeForm.css";
 
 
 export const NutrientForm = ({setResults}) => {

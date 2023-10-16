@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Login from '../pages/Login/Login';
 import Home from './Home';
 import Nutrition from './Nutrition/Nutrition';
-import ServingCounter from './Nutrition/Nutrition';
+import ServingCounter from '../Counters/ServingCounter';
 import RecipeOC from './Recipes/RecipeOC';
 // import Log from './Logbook/Logbook';
 import Footer from '../Footer/Footer';
