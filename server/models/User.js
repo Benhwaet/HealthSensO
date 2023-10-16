@@ -32,15 +32,32 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
+        len: [8],
       },
     },
   },
   {
     hooks: {
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      beforeCreate: async (newReader) => {
+        try {
+          newReader.password = await bcrypt.hash(newReader.password, 10);
+          return newReader;
+        } catch (err) {
+          console.log(err);
+          return err;
+        }
+      },
+      beforeUpdate: async (updatedReader) => {
+        try {
+          updatedReader.password = await bcrypt.hash(
+            updatedReader.password,
+            10
+          );
+          return updatedReader;
+        } catch (err) {
+          console.log(err);
+          return err;
+        }
       },
     },
     sequelize,

@@ -1,21 +1,25 @@
 import React from "react";
-import "../elements/circle.css";
-import NutritionO from '../elements/NutritionO';
-import RecipesO from '../elements/RecipesO';
-import SleepO from '../elements/SleepO';
-import LogO from '../elements/LogO';
-import AvatarImg from "../elements/Avatar";
+import "../CircleLinks/circle.css";
+import NutritionO from '../CircleLinks/NutritionO';
+import RecipesO from '../CircleLinks/RecipesO';
+import LogO from '../CircleLinks/LogO';
 
 
-export default function Home() {
+function Home() {
     return (
-        <div className="row" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", 
-        textAlign: "center", marginTop: "200px", marginBottom: "200px" }}>
-            <AvatarImg />
-            <NutritionO />
-            <RecipesO />
-            <SleepO />
-            <LogO />
+        <div className="row" style={{ display: "flex", flexDirection: "row", 
+        justifyContent: "space-evenly", alignContent: "center",  
+        textAlign: "center", marginTop: "180px", marginBottom: "180px"}}>
+            <NutritionO 
+            href="/nutrition"/>
+            
+            <RecipesO 
+            href="/recipes"/>
+
+            <LogO 
+            href="/log"/>
         </div>
     )
 }
+
+export default Home;

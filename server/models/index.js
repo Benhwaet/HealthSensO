@@ -12,3 +12,4 @@ Logbook.belongsTo(User, {
 });
 
 module.exports = { User, Journal, Logbook }; 
+

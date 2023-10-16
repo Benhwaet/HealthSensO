@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const bcrypt = require('bcrypt');
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -12,7 +13,6 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
       res.status(200).json(dbUserData);
     });
   } catch (err) {
@@ -29,20 +29,21 @@ router.post('/login', async (req, res) => {
         email: req.body.email,
       },
     });
+    console.log(dbUserData);
 
     if (!dbUserData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'Incorrect email. Please try again!' });
       return;
     }
 
-    const validPassword = await dbUserData.checkPassword(req.body.password);
+    const validPassword = bcrypt.compare(dbUserData.password, req.body.password);
 
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'Incorrect password. Please try again!' });
       return;
     }
 
