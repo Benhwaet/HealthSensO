@@ -1,16 +1,23 @@
 import React from 'react';
-import RecipeOC from './section-nutrition/RecipeOC';
-import RecipeBook from './section-nutrition/RecipeBook';
-import CalCalculator from './section-nutrition/CalCalculator';
-import ServingCounter from './section-nutrition/ServingCounter';
+import { Row } from 'react-bootstrap';
+import NutrientOC from './NutrientOC';
+import ServingCounter from '../../Counters/ServingCounter';
+import WaterTracker from '../../Counters/WaterTracker';
 
 export default function Nutrition() {
     return (
         <div>
-            <RecipeOC />
-            <RecipeBook />
-            <CalCalculator />
+
+            <div>
             <ServingCounter />
+            </div>
+            <div>
+            <NutrientOC />
+            </div>
+            <div>
+            <WaterTracker/>
+            </div>
+
         </div>
     )
 }

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
+import FooterLinks from '../CircleLinks/FooterLinks';
+import './footer.css';
 
 export default function Footer() {
     return (
-        <footer style={{ backgroundColor: 'black', height: '125px', width: '100%' }}>
+        <div className="footer">
             <Container>
                 <Row>
-                    <Col></Col>
-                    <Col></Col>
-                    <Col></Col>
+                    <FooterLinks/>
                 </Row>
             </Container>
-        </footer>
+        </div>
     )
 }

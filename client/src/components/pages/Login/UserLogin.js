@@ -1,12 +1,12 @@
 import React from "react";
+import LoginForm from "../../Forms/LoginForm";
 import logo from "./O.png";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
 
 
-export default function Login() {
+export default function UserLogin() {
     const navigate = useNavigate();
-    const loginClick = () => navigate("/login");
     const registerClick = () => navigate("/register");
 
     return (
@@ -19,10 +19,8 @@ export default function Login() {
                     </h2>
                 </div>
                 <img style={{ height: '500px', width: '500px' }} src={logo} alt="center page logo" />
-                <div className="circle" onClick={loginClick}>
-                    <h2 className="circleText">
-                        Login
-                    </h2>
+                <div className="circle2">
+                    <LoginForm />
                 </div>
                 <footer style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', top: '50px' }}></footer>
             </div>

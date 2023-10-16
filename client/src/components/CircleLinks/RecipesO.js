@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './circle.css';
-import { Link } from '@mui/material';
 
-export default function LogO(){
+export default function RecipesO(){
     return (
       <Link to ="/recipes">
       <div className="circle">
-        <div className="circleText2">My Recipes</div>
+        <div className="circleText">Recipes</div>
       </div>
       </Link>
     );

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './RecipeForm.css';
-import LogO from '../circles/RecipesO';
+import LogO from '../../CircleLinks/LogO';
 
 export const RecipeForm = ({setResults}) => {
 	const [input, setInput] = useState("");
@@ -28,7 +28,8 @@ export const RecipeForm = ({setResults}) => {
 				<h1>Recipes</h1>
 				<input className='searchBar' placeholder='Search for Recipe...' value={input} onChange={(e) => handleChange(e.target.value)}></input>
 			</div>
-			<LogO/>
+			<LogO 
+            href="/log"/>
 		</div>
 	);
 };

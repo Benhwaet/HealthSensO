@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './circle.css';
-import { Link } from '@mui/material';
 
 
 export default function NutritionO() {
     return (
       <Link to ="/nutrition">
       <div className="circle">
-        <div className="circleText2">Nutrition</div>
+        <div className="circleText">Nutrition</div>
       </div>
       </Link>
     );
