@@ -56,8 +56,7 @@ function LoginForm() {
     if (!checkPassword(password) || !password) {
       setErrorMessage('Password is invalid');
       return;
-    }
-    alert(`Hello ${email}`);
+    };
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setEmail('');

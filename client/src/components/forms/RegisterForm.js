@@ -58,8 +58,7 @@ function RegisterForm() {
         `Choose a more secure password`
       );
       return;
-    }
-    alert(`Hello ${username}`);
+    };
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setUserName('');
