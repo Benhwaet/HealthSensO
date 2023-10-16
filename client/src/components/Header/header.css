@@ -34,8 +34,9 @@ header {
     color: white;
     display: flex;
     justify-content: center;
+    width: 180px;
     font-size: 40px;
-    margin-top: 40px;
+    margin-top: 45px;
     font-family: 'Nanum Brush Script', cursive;
     line-height: 1;
 }

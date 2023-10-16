@@ -16,7 +16,7 @@ export default function ServingCounter() {
             <div className="servingPage">
                 <Row className="rowSection">
                     <div className="column">
-                        <div className="buttonGroup">
+                        <div className="buttonGroupTop">
                             <button className="serving-amount" onClick={handleClick}>veggie:{count}</button>
                             <button className="serving-amount" onClick={handleClick}>fruit:{count}</button>
                             <button className="serving-amount" onClick={handleClick}>grain:{count}</button>
@@ -24,7 +24,7 @@ export default function ServingCounter() {
                         </div>
                         <img className="food group servings" style={{ height: '450px', width: '450px' }}
                             src={serving} alt="servings on plate" />
-                        <div className="buttonGroup">
+                        <div className="buttonGroupBottom">
                             <button className="serving-amount" onClick={handleClick}>sweet:{count}</button>
                             <button className="serving-amount" onClick={handleClick}>fat:{count}</button>
                             <button className="serving-amount" onClick={handleClick}>dairy:{count}</button>

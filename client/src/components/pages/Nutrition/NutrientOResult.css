@@ -20,3 +20,18 @@
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+.nutrition-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.water-serving {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}

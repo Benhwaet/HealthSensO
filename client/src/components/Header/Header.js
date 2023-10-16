@@ -21,7 +21,7 @@ export default function Header() {
                     <Avatar className="avatar" src={avatar} alt="default avatar" />
                     </Col>
                     <Col className="help">
-                        <a className="helpText" href="Help">Help</a>
+                        <a className="helpText" href="https://github.com/Benhwaet/HealthSensO">Help</a>
                         </Col>
                 </Row>
             </Container>
