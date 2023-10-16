@@ -5,9 +5,11 @@ class Logbook extends Model {}
 
 Logbook.init(
   {
-    userId: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     logbookName: {
       type: DataTypes.STRING,
@@ -17,6 +19,13 @@ Logbook.init(
         type: DataTypes.STRING,
         allowNull: true,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    }
     
   },
   {

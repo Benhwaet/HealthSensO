@@ -5,9 +5,11 @@ class Journal extends Model {}
 
 Journal.init(
   {
-    userId: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     journalEntry: {
       type: DataTypes.STRING,
@@ -17,7 +19,13 @@ Journal.init(
         type: DataTypes.STRING,
         allowNull: true,
     },
-    
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
