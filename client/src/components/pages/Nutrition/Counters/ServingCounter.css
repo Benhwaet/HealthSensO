@@ -29,11 +29,18 @@
     position: relative;
 }
 
-.buttonGroup {
+.buttonGroupTop {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
+.buttonGroupBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .serving-amount {
     display: flex;
     flex-direction: column;
