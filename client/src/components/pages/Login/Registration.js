@@ -3,6 +3,8 @@ import RegisterForm from "../../Forms/RegisterForm";
 import logo from "./O.png";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
+import HeaderBlank from "../../Header/HeaderBlank";
+import FooterBlank from "../../Footer/FooterBlank";
 
 
 export default function Register() {
@@ -11,10 +13,12 @@ export default function Register() {
 
     return (
         <>
-            <header style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', bottom: '150px' }}></header>
-            <div className="row" style={{ position: 'relative', bottom: '130px', height: "400px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
-                <div className="circle2">
-                        <RegisterForm/>
+            <HeaderBlank />
+            <div className="main" >
+                <div className="circle">
+
+                    <RegisterForm />
+
                 </div>
                 <img style={{ height: '500px', width: '500px' }} src={logo} alt="center page logo" />
                 <div className="circle" onClick={loginClick}>
@@ -22,8 +26,8 @@ export default function Register() {
                         Login
                     </h2>
                 </div>
-                <footer style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', top: '50px' }}></footer>
             </div>
+            <FooterBlank />
         </>
     )
 }

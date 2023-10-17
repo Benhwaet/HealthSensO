@@ -4,12 +4,16 @@ import NutrientOC from './NutrientOC';
 import ServingCounter from './Counters/ServingCounter';
 import water from "./Counters/images/Water.png";
 import "./Counters/ServingCounter.css";
+import Header from '../../Header/Header';
+import Footer from '../../Footer/Footer';
 
 export default function Nutrition() {
     return (
         <div>
+            <Header />
             <Row className="nutrition-container">
                 <div>
+                    <h2>Daily Servings</h2>
                     <ServingCounter />
                 </div>
                 <div>
@@ -27,6 +31,7 @@ export default function Nutrition() {
                     <button className="waterButton">Add Water</button>
                 </div>
             </Row>
+            <Footer />
         </div>
     )
 }

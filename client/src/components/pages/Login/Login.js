@@ -2,6 +2,8 @@ import React from "react";
 import logo from "./O.png";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
+import HeaderBlank from "../../Header/HeaderBlank";
+import FooterBlank from "../../Footer/FooterBlank";
 
 
 export default function Login() {
@@ -11,8 +13,8 @@ export default function Login() {
 
     return (
         <>
-            <header style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', bottom: '150px' }}></header>
-            <div className="row" style={{ position: 'relative', bottom: '130px', height: "400px", display: "flex", alignItems: "center", justifyContent: "space-evenly", marginTop: "50px", marginBottom: "50px" }}>
+        <HeaderBlank />
+            <div className="main" >
                 <div className="circle" onClick={registerClick}>
                     <h2 className="circleText" >
                         Register
@@ -24,8 +26,8 @@ export default function Login() {
                         Login
                     </h2>
                 </div>
-                <footer style={{ backgroundColor: 'black', height: '150px', width: '100%', zIndex: '4', position: 'relative', top: '50px' }}></footer>
             </div>
+            <FooterBlank />
         </>
     )
 }

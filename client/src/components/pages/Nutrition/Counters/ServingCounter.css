@@ -2,6 +2,13 @@
     margin: 20px;
 }
 
+h2 {
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+}
 .servingSection {
     display: flex;
     flex-direction: row;
