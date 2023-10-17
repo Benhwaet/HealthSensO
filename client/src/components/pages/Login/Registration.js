@@ -1,5 +1,5 @@
 import React from "react";
-import RegisterForm from "../../Forms/RegisterForm";
+import RegisterForm from "../../forms/RegisterForm";
 import logo from "./O.png";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
